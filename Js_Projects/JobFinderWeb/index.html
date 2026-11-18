@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JobFinder - Find the best remote jobs and internships from top companies.">
+    <meta name="theme-color" content="#2563eb">
+    <title>JobFinder | Find Your Dream Job</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="extra.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    
+     <!-- NAVBAR -->
+      <header class="header">
+         <nav class="navbar container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">J</span>
+                <span>JobFinder</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="#companies">Companies</a></li>
+                <li><a href="saved.html">Saved</a></li>
+                <li class="mobile-only"><a href="login.html">Login</a></li>
+                <li class="mobile-only"><a href="register.html">Register</a></li>
+            </ul>
+
+             <div class="nav-actions">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="register.html" class="register-btn">Register</a>
+                <button type="button" class="theme-btn" id="themeBtn" aria-label="Toggle dark mode">🌙</button>
+            </div>
+            
+            <button type="button" class="menu-btn" id="menuBtn" aria-label="Open menu" aria-controls="navLinks">☰</button>
+
+         </nav>
+      </header>
+
+      <main>
+
+         <!-- HERO -->
+
+         <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="hero-subtitle">Your Career Starts Here</span>
+                    <h1>Find Your Dream <span>Internship or Job</span></h1>
+                    <p>
+                        Explore thousands of internships and job opportunities
+                        from top companies. Build your future with JobFinder.
+                    </p>
+                </div>
+
+                <div class="hero-image">
+                    <div class="hero-illustration" aria-hidden="true">👨‍💻</div>
+                </div>
+            </div>
+
+            <!-- Search Box -->
+
+            <div class="container">
+                <form class="search-box" id="searchForm" role="search">
+
+                    <div class="search-field">
+                        <span class="search-icon" aria-hidden="true"> 
+                             <i class="fa-solid fa-magnifying-glass" ></i>
+                        </span>
+                        <div>
+                            <label for="jobSearch">Search</label>
+                            <input type="text" id="jobSearch" name="job" placeholder="Job title, skills or company">
+                        </div>
+                    </div>
+
+                    <div class="search-field">
+                        <span class="search-icon" aria-hidden="true">📍</span>
+                        <div>
+                            <label for="location">Location</label>
+                            <input type="text" id="location" name="location" placeholder="Country or region">
+                        </div>
+                    </div>
+
+                    <div class="search-field">
+
+                        <span class="search-icon" aria-hidden="true">💼</span>
+                        <div>
+                            <label for="jobType">Job Type</label>
+                            <select id="jobType" name="jobType">
+                                <option value="">All Types</option>
+                                <option value="internship">Internship</option>
+                                <option value="full-time">Full Time</option>
+                                <option value="part-time">Part Time</option>
+                                <option value="contract">Contract</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="search-btn">Search Jobs</button>
+                    </div>
+
+                </form>
+             </div>
+         </section>
+
+          <!-- POPULAR SEARCHES -->
+        <section class="popular-searches">
+            <div class="container">
+                <p>Popular Searches:</p>
+                <div class="search-tags">
+                    <button type="button">Frontend Developer</button>
+                    <button type="button">Web Developer</button>
+                    <button type="button">UI/UX Designer</button>
+                    <button type="button">Data Science</button>
+                    <button type="button">JavaScript Developer</button>
+                </div>
+            </div>
+        </section>
+
+             <!-- CATEGORIES (clickable links) -->
+        <section class="categories section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-subtitle">Explore Opportunities</span>
+                        <h2>Popular Categories</h2>
+                        <p>Browse jobs by category and find the right opportunity for you.</p>
+                    </div>
+                    <a href="jobs.html" class="view-all">View All →</a>
+                </div>
+
+                <div class="categories-grid">
+                    <a href="jobs.html?search=software" class="category-card">
+                        <div class="category-icon" aria-hidden="true">💻</div>
+                        <h3>IT &amp; Software</h3>
+                        <p>Browse jobs</p>
+                    </a>
+                    <a href="jobs.html?search=design" class="category-card">
+                        <div class="category-icon" aria-hidden="true">🎨</div>
+                        <h3>Design</h3>
+                        <p>Browse jobs</p>
+                    </a>
+                    <a href="jobs.html?search=marketing" class="category-card">
+                        <div class="category-icon" aria-hidden="true">📢</div>
+                        <h3>Marketing</h3>
+                        <p>Browse jobs</p>
+                    </a>
+                    <a href="jobs.html?search=finance" class="category-card">
+                        <div class="category-icon" aria-hidden="true">💰</div>
+                        <h3>Finance</h3>
+                        <p>Browse jobs</p>
+                    </a>
+                    <a href="jobs.html?search=data" class="category-card">
+                        <div class="category-icon" aria-hidden="true">📊</div>
+                        <h3>Data Science</h3>
+                        <p>Browse jobs</p>
+                    </a>
+                    <a href="jobs.html" class="category-card">
+                        <div class="category-icon" aria-hidden="true">⚡</div>
+                        <h3>Other</h3>
+                        <p>Browse jobs</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+          <!-- FEATURED JOBS (filled by app.js from the API) -->
+        <section class="featured-jobs section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-subtitle">Latest Opportunities</span>
+                        <h2>Featured Jobs</h2>
+                        <p>Find opportunities from top companies.</p>
+                    </div>
+                    <a href="jobs.html" class="view-all">View All →</a>
+                </div>
+
+                <div class="jobs-grid" id="featuredJobs" aria-live="polite"></div>
+            </div>
+        </section>
+
+         <!-- COMPANIES -->
+        <section class="companies section" id="companies">
+            <div class="container">
+                <div class="section-header centered">
+                    <div>
+                        <span class="section-subtitle">Career Opportunities</span>
+                        <h2>Trusted by Leading Companies</h2>
+                    </div>
+                </div>
+
+                <div class="companies-grid">
+                    <div class="company-brand">Google</div>
+                    <div class="company-brand">Microsoft</div>
+                    <div class="company-brand">Meta</div>
+                    <div class="company-brand">Amazon</div>
+                    <div class="company-brand">Apple</div>
+                    <div class="company-brand">TCS</div>
+                </div>
+            </div>
+        </section>
+
+         <!-- CTA -->
+        <section class="cta section">
+            <div class="container cta-content">
+                <div>
+                    <h2>Ready to Start Your Career?</h2>
+                    <p>Create your profile and discover opportunities that match your skills.</p>
+                </div>
+                <a href="register.html" class="cta-btn">Create Free Account</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">J</span>
+                    <span>JobFinder</span>
+                </a>
+                <p>Helping students and professionals find internships and jobs to build their careers.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="#companies">Companies</a>
+                <a href="saved.html">Saved Jobs</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>For Candidates</h3>
+                <a href="register.html">Create Account</a>
+                <a href="jobs.html">Browse Jobs</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <a href="mailto:info@jobfinder.com">info@jobfinder.com</a>
+                <span>Pakistan</span>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 JobFinder. All rights reserved. Job data provided by
+                    <a href="https://remotive.com" target="_blank" rel="noopener noreferrer">Remotive</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
