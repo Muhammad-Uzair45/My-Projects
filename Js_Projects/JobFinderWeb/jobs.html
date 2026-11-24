@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse all jobs and internships on JobFinder.">
+    <meta name="theme-color" content="#2563eb">
+    <title>All Jobs | JobFinder</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">J</span>
+                <span>JobFinder</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html" class="active">Jobs</a></li>
+                <li><a href="index.html#companies">Companies</a></li>
+                <li><a href="saved.html">Saved</a></li>
+                <li class="mobile-only"><a href="login.html">Login</a></li>
+                <li class="mobile-only"><a href="register.html">Register</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="register.html" class="register-btn">Register</a>
+                <button type="button" class="theme-btn" id="themeBtn" aria-label="Toggle dark mode">🌙</button>
+            </div>
+
+            <button type="button" class="menu-btn" id="menuBtn" aria-label="Open menu" aria-controls="navLinks">☰</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- SEARCH -->
+        <section class="hero jobs-hero">
+            <div class="container">
+                <form class="search-box" id="searchForm" role="search">
+
+                    <div class="search-field">
+                        <span class="search-icon" aria-hidden="true"> 
+                             <i class="fa-solid fa-magnifying-glass" ></i>
+                        </span>                        
+                    <div>
+                            <label for="jobSearch">Search</label>
+                            <input type="text" id="jobSearch" name="job" placeholder="Job title, skills or company">
+                        </div>
+                    </div>
+
+                    <div class="search-field">
+                        <span class="search-icon" aria-hidden="true">📍</span>
+                        <div>
+                            <label for="location">Location</label>
+                            <input type="text" id="location" name="location" placeholder="Country or region">
+                        </div>
+                    </div>
+
+                    <div class="search-field">
+                        <span class="search-icon" aria-hidden="true">💼</span>
+                        <div>
+                            <label for="jobType">Job Type</label>
+                            <select id="jobType" name="jobType">
+                                <option value="">All Types</option>
+                                <option value="internship">Internship</option>
+                                <option value="full-time">Full Time</option>
+                                <option value="part-time">Part Time</option>
+                                <option value="contract">Contract</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="search-btn">Search Jobs</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- RESULTS (filled by app.js) -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-subtitle">Opportunities</span>
+                        <h2>All Jobs</h2>
+                        <p>Job data provided by
+                            <a href="https://remotive.com" target="_blank" rel="noopener noreferrer">Remotive</a>.</p>
+                    </div>
+                </div>
+
+                <div class="jobs-grid" id="jobsResults" aria-live="polite"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 JobFinder. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
