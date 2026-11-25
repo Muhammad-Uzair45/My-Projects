@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2563eb">
+    <title>Saved Jobs | JobFinder</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo"><span class="logo-icon">J</span><span>JobFinder</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="index.html#companies">Companies</a></li>
+                <li><a href="saved.html" class="active">Saved</a></li>
+                <li class="mobile-only"><a href="login.html">Login</a></li>
+                <li class="mobile-only"><a href="register.html">Register</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="register.html" class="register-btn">Register</a>
+                <button type="button" class="theme-btn" id="themeBtn" aria-label="Toggle dark mode">🌙</button>
+            </div>
+            <button type="button" class="menu-btn" id="menuBtn" aria-label="Open menu" aria-controls="navLinks">☰</button>
+        </nav>
+    </header>
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-subtitle">Your List</span>
+                        <h2>Saved Jobs</h2>
+                        <p>Jobs you saved using the ♡ button.</p>
+                    </div>
+                    <a href="jobs.html" class="view-all">Browse Jobs →</a>
+                </div>
+                <div class="jobs-grid" id="savedJobs" aria-live="polite"></div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-bottom"><div class="container">
+            <p>© 2026 JobFinder. All rights reserved. Job data by <a href="https://remotive.com" target="_blank" rel="noopener noreferrer">Remotive</a>.</p>
+        </div></div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
